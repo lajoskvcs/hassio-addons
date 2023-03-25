@@ -1,0 +1,5 @@
+{
+  "name": "Home Assistant Node addon",
+  "url": "https://github.com/lajoskvcs/hassio-nodejs-addon-template",
+  "maintainer": "Lajos Kovács <https://github.com/lajoskvcs>"
+}
