@@ -18,16 +18,8 @@
     "domains": [
       {
         "domain": "example.com",
-        "subdomains": [
-          {
-            "ttl": 600,
-            "subdomain": "hassio"
-          },
-          {
-            "ttl": 600,
-            "subdomain": "freshrss"
-          }
-        ]
+        "ttl": 600,
+        "subdomains": ["hassio", "freshrss"]
       }
     ]
   },
@@ -38,12 +30,8 @@
     "domains": [
       {
         "domain": "str",
-        "subdomains": [
-          {
-            "ttl": "int?",
-            "subdomain": "str"
-          }
-        ]
+        "subdomains": "str",
+        "ttl": "int?"
       }
     ]
   }

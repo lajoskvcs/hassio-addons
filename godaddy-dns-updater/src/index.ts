@@ -19,10 +19,8 @@ const configSchema = z.object({
 	godaddyKey: z.string().nonempty(),
 	domains: z.array(z.object({
 		domain: z.string().nonempty(),
-		subdomains: z.array(z.object({
-			ttl: z.coerce.number().default(600),
-			subdomain: z.string().nonempty()
-		}))
+		ttl: z.coerce.number().default(600),
+		subdomains: z.array(z.string().nonempty())
 	}))
 })
 
@@ -60,7 +58,7 @@ async function checkDomains() {
 			await putDomainARecord({
 				domain: domainConfig.domain,
 				subdomain: subdomain.subdomain,
-				ttl: subdomain.ttl,
+				ttl: domainConfig.ttl,
 				ip: externalIP
 			}, { godaddyKey, godaddySecret })
 			console.log(`Ip refreshed for subdomain ${subdomain.subdomain} on domain ${domainConfig.domain} with ttl ${subdomain.ttl}`)
