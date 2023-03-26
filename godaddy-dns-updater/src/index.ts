@@ -57,11 +57,11 @@ async function checkDomains() {
 		for(const subdomain of domainConfig.subdomains) {
 			await putDomainARecord({
 				domain: domainConfig.domain,
-				subdomain: subdomain.subdomain,
+				subdomain: subdomain,
 				ttl: domainConfig.ttl,
 				ip: externalIP
 			}, { godaddyKey, godaddySecret })
-			console.log(`Ip refreshed for subdomain ${subdomain.subdomain} on domain ${domainConfig.domain} with ttl ${subdomain.ttl}`)
+			console.log(`Ip refreshed for subdomain ${subdomain} on domain ${domainConfig.domain} with ttl ${domainConfig.ttl}`)
 		}
 	}
 }
