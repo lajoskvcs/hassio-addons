@@ -1,8 +1,8 @@
 {
-  "slug": "example",
-  "name": "Example",
+  "slug": "godaddy_dns_updater",
+  "name": "Godaddy DNS updater",
   "version": "1.0.0",
-  "url": "https://github.com/lajoskvcs/hassio-nodejs-addon-template",
+  "url": "https://github.com/lajoskvcs/hassio-addons",
   "stage": "stable",
   "description": "",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
