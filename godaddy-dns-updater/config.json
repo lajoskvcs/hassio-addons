@@ -1,0 +1,50 @@
+{
+  "slug": "example",
+  "name": "Example",
+  "version": "1.0.0",
+  "url": "https://github.com/lajoskvcs/hassio-nodejs-addon-template",
+  "stage": "stable",
+  "description": "",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "boot": "auto",
+  "ports": {},
+  "ports_description": {},
+  "map": [],
+  "options": {
+    "scanInterval": 300,
+    "godaddySecret": "2Td3YTgFjYTgFjdWh6d2on",
+    "godaddyKey": "J4ikisg_Gi32gL4eo426plqWg1hj32X6df",
+    "domains": [
+      {
+        "domain": "example.com",
+        "subdomains": [
+          {
+            "ttl": 600,
+            "subdomain": "hassio"
+          },
+          {
+            "ttl": 600,
+            "subdomain": "freshrss"
+          }
+        ]
+      }
+    ]
+  },
+  "schema": {
+    "scanInterval": "int",
+    "godaddySecret": "str(22,22)",
+    "godaddyKey": "str(34,34)",
+    "domains": [
+      {
+        "domain": "str",
+        "subdomains": [
+          {
+            "ttl": "int?",
+            "subdomain": "str"
+          }
+        ]
+      }
+    ]
+  }
+}
