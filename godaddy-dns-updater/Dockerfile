@@ -13,7 +13,6 @@ COPY package.json /
 COPY tsconfig.json /
 COPY src /
 RUN cd / && npm install --unsafe-perm
-RUN cd / && npm run build
 
 COPY run.sh /
 RUN chmod a+x /run.sh
