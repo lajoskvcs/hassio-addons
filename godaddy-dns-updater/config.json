@@ -1,7 +1,7 @@
 {
   "slug": "godaddy_dns_updater",
   "name": "Godaddy DNS updater",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://github.com/lajoskvcs/hassio-addons",
   "stage": "stable",
   "description": "",
@@ -25,13 +25,13 @@
   },
   "schema": {
     "scanInterval": "int",
-    "godaddySecret": "str(22,22)",
-    "godaddyKey": "str(34,34)",
+    "godaddySecret": "str",
+    "godaddyKey": "str",
     "domains": [
       {
         "domain": "str",
-        "subdomains": "str",
-        "ttl": "int?"
+        "ttl": "int?",
+        "subdomains": ["str"]
       }
     ]
   }
