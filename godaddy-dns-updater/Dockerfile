@@ -11,7 +11,7 @@ RUN apk add --no-cache \
 
 COPY package.json /
 COPY tsconfig.json /
-COPY src /
+COPY src /src
 RUN cd / && npm install --unsafe-perm
 
 COPY run.sh /
