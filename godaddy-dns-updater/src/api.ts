@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import fetch from 'node-fetch'
 
 const GODADDY_DOMAIN = 'https://api.godaddy.com'
 
