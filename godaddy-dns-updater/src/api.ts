@@ -32,7 +32,7 @@ export async function getDomains({
         }
     })
     if(response.status === 200) {
-        const parsed = await getDomainsSchema.safeParseAsync(response.json())
+        const parsed = await getDomainsSchema.safeParseAsync(await response.json())
         if(parsed.success) {
             return parsed.data
         }

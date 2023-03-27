@@ -8,6 +8,7 @@ let configFile
 
 try {
 	configFile = JSON.parse(fs.readFileSync('/data/options.json', 'utf8'))
+	// configFile = JSON.parse(fs.readFileSync(process.cwd() + '/testData.json', 'utf8'))
 } catch(error: unknown) {
 	console.error('Configuration is not valid');
 	process.exit(22);
@@ -45,6 +46,7 @@ async function checkDomains() {
 		process.exit(22)
 	}
 	const externalIP = await publicIpv4()
+	console.log(`The current external IP is ${externalIP}`)
 	for(const domainConfig of config.domains) {
 		const registeredDomain = registeredDomains.find(registeredDomain => registeredDomain.domain === domainConfig.domain)
 		if(typeof registeredDomain === 'undefined') {
