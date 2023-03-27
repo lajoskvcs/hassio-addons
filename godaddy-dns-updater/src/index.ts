@@ -59,7 +59,7 @@ async function checkDomains() {
 		for(const subdomain of domainConfig.subdomains) {
 			await putDomainARecord({
 				domain: domainConfig.domain,
-				subdomain: subdomain,
+				subdomain,
 				ttl: domainConfig.ttl,
 				ip: externalIP
 			}, { godaddyKey, godaddySecret })

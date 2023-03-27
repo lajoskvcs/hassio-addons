@@ -90,10 +90,4 @@ export async function putDomainARecord({
         },
         body: JSON.stringify([{ data: ip, ttl }])
     })
-    if(response.status === 200) {
-        const parsed = await getDomainsSchema.safeParseAsync(response.json())
-        if(parsed.success) {
-            return parsed.data
-        }
-    }
 }
