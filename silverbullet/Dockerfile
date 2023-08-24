@@ -11,9 +11,8 @@ RUN apk add --no-cache \
 
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh
 
-RUN echo 'export DENO_INSTALL="/root/.deno"' >> ~/.bashrc
-RUN echo 'export PATH="$DENO_INSTALL/bin:$PATH"' >> ~/.bashrc
-RUN source ~/.bashrc
+RUN export DENO_INSTALL="/root/.deno"
+RUN export PATH="$DENO_INSTALL/bin:$PATH"
 
 
 RUN deno install -f --name silverbullet --unstable -A https://get.silverbullet.md
