@@ -6,4 +6,4 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN deno install -f --name silverbullet --unstable -A https://get.silverbullet.md
 
-CMD [ "silverbullet /data -p 8090" ]
+CMD [ "~/.deno/bin/silverbullet /data -p 8090" ]
