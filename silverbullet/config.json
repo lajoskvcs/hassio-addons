@@ -1,0 +1,14 @@
+{
+  "slug": "silverbullet",
+  "name": "SilverBullet",
+  "version": "1.0.0",
+  "url": "https://github.com/lajoskvcs/hassio-addons",
+  "stage": "stable",
+  "description": "",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "init": false,
+  "ingress": true,
+  "panel_icon": "mdi:notebook",
+  "panel_title": "Notebook"
+}
