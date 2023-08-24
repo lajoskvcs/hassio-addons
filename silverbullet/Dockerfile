@@ -6,6 +6,10 @@ ENV SB_FOLDER="/data"
 ENV SB_PORT=8099
 ENV SB_HOSTNAME="0.0.0.0"
 
-ENTRYPOINT []
+USER root
 
-CMD ["mkdir -p /data/vault && chown -R /data/vault && /tini", "--", "deno", "run", "-A", "--unstable", "/silverbullet.js"]
+EXPOSE 8099
+
+# ENTRYPOINT []
+
+# CMD ["mkdir -p /data/vault && chown -R /data/vault && /tini", "--", "deno", "run", "-A", "--unstable", "/silverbullet.js"]
