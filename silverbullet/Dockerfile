@@ -6,4 +6,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN deno install -f --name silverbullet --unstable -A https://get.silverbullet.md/
 
-CMD [ "ls /data && silverbullet /data -L 0.0.0.0 -p 8099" ]
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
