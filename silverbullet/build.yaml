@@ -1,2 +1,2 @@
 build_from:
-  amd64: denoland/deno:latest
+  amd64: zefhemel/silverbullet:latest
