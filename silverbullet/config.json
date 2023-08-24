@@ -10,10 +10,5 @@
   "init": false,
   "ingress": true,
   "panel_icon": "mdi:notebook",
-  "panel_title": "Notebook",
-  "environment": {
-    "SB_FOLDER": "/data",
-    "SB_PORT": 8099,
-    "SB_HOSTNAME": "0.0.0.0"
-  }
+  "panel_title": "Notebook"
 }
