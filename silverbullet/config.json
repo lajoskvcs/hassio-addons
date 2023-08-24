@@ -2,7 +2,7 @@
   "slug": "silverbullet",
   "name": "SilverBullet",
   "description": "Markdown as a platform",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://github.com/lajoskvcs/hassio-addons",
   "stage": "stable",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
