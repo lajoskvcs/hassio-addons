@@ -2,7 +2,7 @@
   "slug": "silverbullet",
   "name": "SilverBullet",
   "description": "Markdown as a platform",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "url": "https://github.com/lajoskvcs/hassio-addons",
   "stage": "stable",
   "arch": ["amd64"],
@@ -11,5 +11,5 @@
   "ingress": true,
   "panel_icon": "mdi:notebook",
   "panel_title": "Notebook",
-  "map": ["config:rw", "share:rw"]
+  "map": ["config:rw"]
 }
