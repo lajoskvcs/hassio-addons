@@ -9,4 +9,4 @@ RUN deno install -f --name silverbullet --unstable -A https://get.silverbullet.m
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-CMD [ "/run.sh" ]
+ENTRYPOINT [ "/run.sh" ]
