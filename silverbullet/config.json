@@ -2,14 +2,14 @@
   "slug": "silverbullet",
   "name": "SilverBullet",
   "description": "Markdown as a platform",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "url": "https://github.com/lajoskvcs/hassio-addons",
   "stage": "stable",
   "arch": ["amd64"],
   "startup": "services",
   "init": false,
-  "ingress": true,
-  "panel_icon": "mdi:notebook",
-  "panel_title": "Notebook",
+  "ports": {
+    "3000/tcp": "3082"
+  },
   "map": ["config:rw"]
 }
