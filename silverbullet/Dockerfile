@@ -2,6 +2,6 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
-ENV SB_FOLDER="/config/silverbullet/"
+ENV SB_FOLDER="/share/silverbullet/"
 ENV SB_PORT=8099
 ENV SB_HOSTNAME="0.0.0.0"
