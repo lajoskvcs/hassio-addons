@@ -39,12 +39,12 @@ const config = parsed.data
 async function checkDomains() {
 	const { apiKey } = config
 	const instance = new DigitalOcean(apiKey)
-	const registeredDomains = await getDomains({
+	let registeredDomains
+	registeredDomains = await getDomains({
 		apiKey,
 	})
 	if(typeof registeredDomains === 'undefined') {
-		console.error('No registered domains found on Digital Ocean account')
-		process.exit(22)
+		throw new Error('No registered domains found on Digital Ocean account')
 	}
 	const externalIP = await publicIpv4()
 	console.log(`The current external IP is ${externalIP}`)
@@ -108,10 +108,19 @@ async function checkDomains() {
 
 
 async function startProcess() {
-	await checkDomains()
-	setTimeout(() => {
-		startProcess()
-	}, getScanInterval(config.scanInterval))
+	try {
+		await checkDomains()
+		console.log(`We will recheck after ${config.scanInterval} seconds`)
+		setTimeout(() => {
+			startProcess()
+		}, getScanInterval(config.scanInterval))
+	} catch(err) {
+		console.error(err)
+		console.log('We will retry after 30 seconds')
+		setTimeout(() => {
+			startProcess()
+		}, getScanInterval(30))
+	}
 }
 
 startProcess().catch(console.error)
