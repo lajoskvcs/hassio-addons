@@ -67,7 +67,7 @@ async function checkDomains() {
 			if(subdomainsToAdd.has(record.name)) {
 				subdomainsToAdd.delete(record.name)
 			}
-			if(record.data !== externalIP) {
+			if(record.data !== externalIP && domainConfig.subdomains.includes(record.name)) {
 				subdomainsToUpdate.push({ subdomain: record.name, recordId: record.id.toString() })
 			}
 		})
