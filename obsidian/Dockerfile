@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbullseye
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
 # Update and install extra packages.
 RUN echo "**** install packages ****" && \
@@ -26,6 +26,10 @@ ENV CUSTOM_PORT="8080" \
 # Add local files
 COPY root/ /
 EXPOSE 8080 8443
+
+# Remove sudo
+RUN rm /usr/bin/sudo
+
 VOLUME ["/config","/vaults"]
 
 # Define a healthcheck
