@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
+FROM ghcr.io/hassio-addons/debian-base/amd64:6.0.0
 
 # Update and install extra packages.
 RUN echo "**** install packages ****" && \

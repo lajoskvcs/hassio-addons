@@ -1,6 +1,6 @@
 {
   "name": "Obsidian Remote",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "slug": "obsidian_remote",
   "description": "Run Obsidian in a Docker container and access it via a browser",
   "arch": ["amd64", "armv7", "aarch64"],
