@@ -1,2 +1,3 @@
 dist/
 testData.json
+node_modules/
