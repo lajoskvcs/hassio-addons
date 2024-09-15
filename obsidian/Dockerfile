@@ -12,3 +12,5 @@ EXPOSE ${PORT}
 
 # Define volumes for storing vaults and configuration
 VOLUME [ "/vaults", "/config" ]
+
+ENTRYPOINT ["/init"]
