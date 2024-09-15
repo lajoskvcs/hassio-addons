@@ -1,6 +1,6 @@
 {
   "name": "Obsidian Remote",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "slug": "obsidian_remote",
   "description": "Run Obsidian in a Docker container and access it via a browser",
   "arch": ["amd64", "armv7", "aarch64"],
@@ -14,11 +14,9 @@
     "config": "rw"
   },
   "options": {
-    "port": 8080,
     "timezone": "UTC"
   },
   "schema": {
-    "port": "int",
     "timezone": "str"
   }
 }
