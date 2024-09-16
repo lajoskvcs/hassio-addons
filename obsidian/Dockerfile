@@ -3,7 +3,7 @@ FROM ghcr.io/hassio-addons/debian-base/amd64:6.0.0
 # Update and install extra packages.
 RUN echo "**** install packages ****" && \
     apt-get update && \
-    apt-get install -y --no-install-recommends curl libgtk-3-0 libnotify4 libatspi2.0-0 libsecret-1-0 libnss3 desktop-file-utils fonts-noto-color-emoji git ssh-askpass && \
+    apt-get install -y --no-install-recommends curl ca-certificates libgtk-3-0 libnotify4 libatspi2.0-0 libsecret-1-0 libnss3 desktop-file-utils fonts-noto-color-emoji git ssh-askpass libxss1 libxtst6 xdg-utils && \
     apt-get autoclean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 # Set version label
@@ -26,9 +26,6 @@ ENV CUSTOM_PORT="8080" \
 # Add local files
 COPY root/ /
 EXPOSE 8080 8443
-
-# Remove sudo
-RUN rm /usr/bin/sudo
 
 VOLUME ["/config","/vaults"]
 
