@@ -31,4 +31,4 @@ VOLUME ["/config","/vaults"]
 
 # Define a healthcheck
 HEALTHCHECK CMD curl --fail http://localhost:8080/ || exit 1
-ENTRYPOINT ["/init"]
+ENTRYPOINT ["exec /init"]
